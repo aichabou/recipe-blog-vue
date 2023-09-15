@@ -1,6 +1,5 @@
 <template>
   <div class="admin-page">
-    <!-- Container 1 - Informations sur le client -->
     <div class="info-container">
       <div class="client-info">
         <h2 class="num-client text">N° de client : 97721</h2>
@@ -43,31 +42,28 @@
       </div>
     </div>
 
-    <!-- Container 2 - Compétences et langues -->
     <div class="container skills-languages-container">
       <h2 class="title">Compétences</h2>
       <ul class="skills-list">
-        <li class="text color-text">Droit Fiscal</li>
-        <li class="text color-text">Prix de transfert</li>
-        <!-- Ajoutez plus de compétences ici -->
+        <li class="color-text">Droit Fiscal</li>
+        <li class="color-text">Prix de transfert</li>
       </ul>
       <h2 class="title">Langues</h2>
       <ul class="languages-list">
-        <li class="text color-text"><font-awesome-icon :icon="['fas', 'flag-fr']" /> Français</li>
-        <li class="text color-text"><font-awesome-icon :icon="['fas', 'flag-gb']" /> Anglais</li>
-        <li class="text color-text"><font-awesome-icon :icon="['fas', 'flag-es']" /> Espagnol</li>
+        <li class="color-text"><font-awesome-icon :icon="['fas', 'flag-fr']" /> Français</li>
+        <li class="color-text"><font-awesome-icon :icon="['fas', 'flag-gb']" /> Anglais</li>
+        <li class="color-text"><font-awesome-icon :icon="['fas', 'flag-es']" /> Espagnol</li>
       </ul>
     </div>
 
     <div class="container law-firm-container">
-      <h2 class="text">Cabinet d'avocat: BC Avocat Associés</h2>
+      <h2 class="size-text">Cabinet d'avocat: BC Avocat Associés</h2>
       <hr class="client-info-divider" />
       <img class="bc-image" src="/assets/bc.png" alt="Client Image" />
       <a href="#" class="text color-text">Voir la page</a>
     </div>
 
     <div class="container">
-      <!-- Container 4 - Biographie et Container 5 - Distinctions -->
       <div class="bio-distinct-container">
         <div class="biography-container">
           <h2 class="title">Biographie</h2>
@@ -90,7 +86,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="even text">
+            <tr>
               <td>Best Lawyers 2022 – Tax Law</td>
               <td>2022</td>
             </tr>
@@ -98,7 +94,7 @@
               <td>Magazine Le Point 2021 – Droit fiscal – 4 étoiles</td>
               <td>2021</td>
             </tr>
-            <tr class="even text">
+            <tr>
               <td>World Tax 2020 – Tax Law – Tier 5</td>
               <td>2021</td>
             </tr>
@@ -135,8 +131,8 @@
 .info-container {
   display: flex;
   align-items: center;
-  width: 250px; /* Largeur fixe de 300 pixels */
-  height: 300px; /* Hauteur fixe de 300 pixels */
+  width: 250px;
+  height: 250px; 
   margin: 10px;
   padding-top: 0;
   padding: 20px;
@@ -149,13 +145,18 @@
 
 
 .client-info-divider {
-  border-top: 1px solid #BDC2CA; /* Couleur grise */
-  width: 100%; /* La ligne s'étend sur toute la largeur du conteneur */
-  margin-top: 10px; /* Marge au-dessus de la ligne */
-  margin-bottom: 10px; /* Marge en dessous de la ligne */
+  border-top: 1px solid #BDC2CA;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .color-text{
   color:#BDC2CA;
+  font-size: 12px;
+}
+
+.size-text{
+  font-size: 12px;
 }
 img {
   max-width: 100px;
@@ -167,7 +168,7 @@ img {
   margin: 0 auto;
   max-width: 70px;
   max-height: 70px;
-  margin-bottom: 20px; /* Ajoute un espace en dessous de l'image */
+  margin-bottom: 20px;
 }
 .bc-image{
   display: block;
@@ -185,45 +186,31 @@ td{
 }
 
 .info-pair {
-  margin-bottom: 10px; /* Ajoute un espace entre chaque paire "terme - valeur" */
+  margin-bottom: 10px;
 }
 
 .info-pair dd {
-  color: #333; /* Couleur de texte */
-  margin-left: 5px; /* Ajoute de l'espace à gauche de chaque valeur */
+  color: #333;
+  margin-left: 5px;
 }
 
 .info-pair dt {
-  font-weight: bold; /* Met en gras le terme (Civilité, Prénom, etc.) */
-  margin-bottom: 5px; /* Ajoute de l'espace en dessous de chaque terme */
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .info-table td:first-child {
-  padding-right: 50px; /* Ajoute un espacement à droite de la première colonne */
-}
-
-.info-inline {
-  display: flex;
-  align-items: center;
-}
-
-.info-inline dt {
-  margin-right: 10px; /* Ajoute de l'espace à droite de chaque terme */
-  font-weight: bold;
-}
-
-.info-inline dd {
-  color: #333; /* Couleur de texte */
+  padding-right: 50px;
 }
 
 .info-pair dd:last-child {
-  margin-left: 0; /* Supprime la marge à gauche du dernier élément 'dd' */
+  margin-left: 0;
 }
 
 .num-client {
-  font-size: 14px; /* Taille de police plus petite */
-  color:#BDC2CA; /* Couleur de texte #98A0AD */
-  text-align: center; /* Centre le texte horizontalement */
+  font-size: 14px;
+  color:#BDC2CA;
+  text-align: center;
 }
 
 .distinctions-container table {
@@ -233,57 +220,56 @@ td{
 
 
 .skills-languages-container {
-  border: 3px solid #153C65; /* Bordure bleue */
-  border-radius: 10px; /* Rayon de bordure de 20 pixels */
+  border: 3px solid #153C65;
+  border-radius: 10px;
   margin-right: 40px;
   height: 180px;
 }
 
 .skills-list {
-  padding: 0; /* Supprimer le remplissage par défaut de la liste */
-  display: flex; /* Utiliser flexbox pour afficher les éléments en ligne */
-  flex-wrap:nowrap; /* Permettre le retour à la ligne automatique si nécessaire */
+  padding: 0;
+  display: flex;
+  flex-wrap:nowrap;
   justify-content: space-between;
   gap: 10px;
 }
 
 .languages-list {
-  list-style: none; /* Supprimer les puces de la liste */
-  padding: 0; /* Supprimer le remplissage par défaut de la liste */
-  flex-wrap: wrap; /* Permettre le retour à la ligne automatique si nécessaire */
-   /* Espacement de 10 pixels entre les éléments (ajustez la valeur selon vos besoins) */
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
 }
 
 .languages-list i {
-  font-size: 24px; /* Taille de l'icône (ajustez la taille selon vos besoins) */
-  margin-right: 5px; /* Espacement entre l'icône et le texte */
+  font-size: 24px;
+  margin-right: 5px;
 }
 
 .law-firm-container {
-  width: 30px; /* Largeur fixe de 200 pixels */
-  height:150px; /* Hauteur fixe de 150 pixels */
-  background-color: #153C65; /* Fond bleu */
-  color: white; /* Texte blanc */
-  text-align: center; /* Centre le texte horizontalement */
+  width: 30px;
+  height:150px;
+  background-color: #153C65;
+  color: white;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 20px; /* Ajoute un padding de 20 pixels à l'intérieur du conteneur */
-  border-radius: 10px; /* Rayon de bordure de 5 pixels */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .law-firm-container a {
-  color: white; /* Couleur du lien en blanc */
-  text-decoration: none; /* Supprime le soulignement du lien */
+  color: white;
+  text-decoration: none;
 }
 
 
 .law-firm-container a {
-  text-decoration: underline; /* Ajoute un soulignement au survol du lien */
+  text-decoration: underline;
 }
 .bio-distinct-container {
   display: flex;
   justify-content: space-between;
-  width: 700px; /* Largeur fixe de 200 pixels */
+  width: 700px;
   height:150px;
 
 }
@@ -293,35 +279,27 @@ td{
   flex: 1;
   margin-top: 0;
 }
-.text{
-  font-size: 12px;
-}
 
 .title-tab{
   font-size: 14px;
 }
 
 .title{
-  font-size: 12px;
+  font-size: 14px;
   color:#153C65
 }
 
 .distinctions-container th {
-  background-color: #c0e2f0; /* Couleur de fond bleu clair */
-  text-align: left; /* Alignement du texte vers la gauche */
-  padding: 10px; /* Espacement intérieur */
+  background-color: #c0e2f0;
+  text-align: left;
+  padding: 10px;
 }
 .distinctions-container td {
-  padding: 8px; /* Ajoutez le padding souhaité ici */
-}
-/* Appliquer un fond différent aux lignes paires et impaires */
-.distinctions-container tr.even {
-  background-color: #fff; 
- /* Fond blanc pour les lignes paires */
- 
+  padding: 8px; 
 }
 
+
 .distinctions-container tr.odd {
-  background-color: #f2f2f2; /* Fond gris pour les lignes impaires */
+  background-color: #f2f2f2;
 }
 </style>
