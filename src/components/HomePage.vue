@@ -8,32 +8,32 @@
         <table class="info-table">
           <tbody>
             <tr>
-              <td>Civilité</td>
+              <td class="td">Civilité</td>
               <td class="color-text">:</td>
               <td class="color-text">Mademoiselle</td>
             </tr>
             <tr>
-              <td>Prénom</td>
+              <td class="td">Prénom</td>
               <td class="color-text">:</td>
               <td class="color-text">Aicha</td>
             </tr>
             <tr>
-              <td>Nom</td>
+              <td class="td">Nom</td>
               <td class="color-text">:</td>
               <td class="color-text">Bouchaikh</td>
             </tr>
             <tr>
-              <td>Téléphone Mobile</td>
+              <td class="td">Téléphone Mobile</td>
               <td class="color-text">:</td>
               <td class="color-text">06 01 02 99 88</td>
             </tr>
             <tr>
-              <td>E-mail</td>
+              <td class="td">E-mail</td>
               <td class="color-text">:</td>
               <td class="color-text">aicha.bouchaikh@gmail.com</td>
             </tr>
             <tr>
-              <td>Ville</td>
+              <td class="td">Ville</td>
               <td class="color-text">:</td>
               <td class="color-text">Lille</td>
             </tr>
@@ -50,9 +50,18 @@
       </ul>
       <h2 class="title">Langues</h2>
       <ul class="languages-list">
-        <li class="color-text"><font-awesome-icon :icon="['fas', 'flag-fr']" /> Français</li>
-        <li class="color-text"><font-awesome-icon :icon="['fas', 'flag-gb']" /> Anglais</li>
-        <li class="color-text"><font-awesome-icon :icon="['fas', 'flag-es']" /> Espagnol</li>
+        <li>
+          <img src="/assets/france.png" alt="French Flag" style="width: 10px; height: 10px;" />
+          <span class="color-text">Français</span>
+        </li>
+        <li>
+          <img src="/assets/uk.png" alt="British Flag" style="width: 10px; height: 10px;" />
+          <span class="color-text">Anglais</span>
+        </li>
+        <li>
+          <img src="/assets/espagne.png" alt="Spanish Flag" style="width: 10px; height: 10px;" />
+          <span class="color-text">Espagnol</span>
+        </li>
       </ul>
     </div>
 
@@ -67,10 +76,8 @@
       <div class="bio-distinct-container">
         <div class="biography-container">
           <h2 class="title">Biographie</h2>
-          <p class="text color-text">Réputé pour son expertise en matière de fiscalité internationale et de prix de transfert, Cyril Maucour accompagne les sociétés
-            françaises dans leurs opérations à l’international et assiste les groupes étrangers dans le cadre de leurs activités en France.</p>
-          <p class="text color-text">Il intervient notamment dans la structuration et la documentation de leurs opérations transfrontalières.
-            Cyril conseille des multinationales mais aussi des PME et ETI.</p>
+          <p class="color-text">Réputé pour son expertise en matière de fiscalité internationale et de prix de transfert, Cyril Maucour accompagne les sociétés françaises dans leurs opérations à l’international et assiste les groupes étrangers dans le cadre de leurs activités en France.</p>
+          <p class="color-text">Il intervient notamment dans la structuration et la documentation de leurs opérations transfrontalières. Cyril conseille des multinationales mais aussi des PME et ETI.</p>
         </div>
       </div>
     </div>
@@ -81,27 +88,26 @@
         <table>
           <thead>
             <tr>
-              <th class="title-tab">Titre</th>
-              <th class="title-tab">Année</th>
+              <th class="title">Titre</th>
+              <th class="title">Année</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Best Lawyers 2022 – Tax Law</td>
-              <td>2022</td>
+              <td class="color-text">Best Lawyers 2022 – Tax Law</td>
+              <td class="color-text">2022</td>
             </tr>
             <tr class="odd text">
-              <td>Magazine Le Point 2021 – Droit fiscal – 4 étoiles</td>
-              <td>2021</td>
+              <td class="color-text">Magazine Le Point 2021 – Droit fiscal – 4 étoiles</td>
+              <td class="color-text">2021</td>
             </tr>
             <tr>
-              <td>World Tax 2020 – Tax Law – Tier 5</td>
-              <td>2021</td>
+              <td class="color-text">World Tax 2020 – Tax Law – Tier 5</td>
+              <td class="color-text">2021</td>
             </tr>
             <tr class="odd text">
-              <td>Décideurs 2020 – Gestion du patrimoine – Fiscalité du
-                patrimoine – Band 4</td>
-              <td>2020</td>
+              <td class="color-text">Décideurs 2020 – Gestion du patrimoine – Fiscalité du patrimoine – Band 4</td>
+              <td class="color-text">2020</td>
             </tr>
           </tbody>
         </table>
@@ -132,9 +138,8 @@
   display: flex;
   align-items: center;
   width: 250px;
-  height: 250px; 
+  height: 250px;
   margin: 10px;
-  padding-top: 0;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -143,26 +148,28 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-
 .client-info-divider {
   border-top: 1px solid #BDC2CA;
   width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.color-text{
-  color:#BDC2CA;
+
+.color-text {
+  color: #BDC2CA;
   font-size: 12px;
 }
 
-.size-text{
+.size-text {
   font-size: 12px;
 }
+
 img {
   max-width: 100px;
   max-height: 100px;
   margin-right: 20px;
 }
+
 .profile-image {
   display: block;
   margin: 0 auto;
@@ -170,19 +177,20 @@ img {
   max-height: 70px;
   margin-bottom: 20px;
 }
-.bc-image{
+
+.bc-image {
   display: block;
   margin: 0 auto;
   margin-bottom: 10px;
   margin-top: 10px;
   max-width: 100px;
   max-height: 100px;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
-td{
+.td {
   font-size: 12px;
-  color: #153C65,
+  color: #153C65;
 }
 
 .info-pair {
@@ -209,7 +217,7 @@ td{
 
 .num-client {
   font-size: 14px;
-  color:#BDC2CA;
+  color: #BDC2CA;
   text-align: center;
 }
 
@@ -217,7 +225,6 @@ td{
   list-style-type: none;
   padding: 0;
 }
-
 
 .skills-languages-container {
   border: 3px solid #153C65;
@@ -229,7 +236,7 @@ td{
 .skills-list {
   padding: 0;
   display: flex;
-  flex-wrap:nowrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   gap: 10px;
 }
@@ -247,7 +254,7 @@ td{
 
 .law-firm-container {
   width: 30px;
-  height:150px;
+  height: 150px;
   background-color: #153C65;
   color: white;
   text-align: center;
@@ -262,16 +269,15 @@ td{
   text-decoration: none;
 }
 
-
 .law-firm-container a {
   text-decoration: underline;
 }
+
 .bio-distinct-container {
   display: flex;
   justify-content: space-between;
   width: 700px;
-  height:150px;
-
+  height: 150px;
 }
 
 .biography-container,
@@ -280,13 +286,9 @@ td{
   margin-top: 0;
 }
 
-.title-tab{
+.title {
   font-size: 14px;
-}
-
-.title{
-  font-size: 14px;
-  color:#153C65
+  color: #153C65;
 }
 
 .distinctions-container th {
@@ -294,10 +296,10 @@ td{
   text-align: left;
   padding: 10px;
 }
-.distinctions-container td {
-  padding: 8px; 
-}
 
+.distinctions-container td {
+  padding: 8px;
+}
 
 .distinctions-container tr.odd {
   background-color: #f2f2f2;
