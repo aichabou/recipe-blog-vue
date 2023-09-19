@@ -8,8 +8,8 @@
       </div>
       <div class="form-group password-input-container">
         <input
-          type="password"
           id="password"
+          :type="showPassword ? 'text' : 'password'"
           v-model="password"
           placeholder="Mot de passe"
           :class="{ 'show-password': showPassword }"
@@ -19,9 +19,19 @@
           <i v-else class="fas fa-eye-slash"></i>
         </span>
       </div>
-      <button @click="login" class="login-button">Connexion</button>
+      <div class="form-group remember-me">
+      <div class="remember-me-checkbox">
+        <input type="checkbox" id="rememberMe" v-model="rememberMe" />
+        <label for="rememberMe"></label>
+      </div>
+      <div class="remember-me-text">
+        <label class="common-style" for="rememberMe">Se souvenir de moi</label>
+        <label class="common-style">Mot de passe oublié?</label>
+      </div>
     </div>
+    <button @click="login" class="login-button">Connexion</button>
   </div>
+</div>
 </template>
 
 
@@ -35,6 +45,7 @@ export default {
       email: '',
       password: '',
       showPassword: false,
+      rememberMe: false,
     };
   },
   methods: {
@@ -139,6 +150,28 @@ input {
   right: 10px;
   transform: translateY(-50%);
   cursor: pointer;
+  color: #677C95;
+}
+
+
+.remember-me-checkbox {
+  margin-right: 10px;
+}
+
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+.common-style{
+  font-size: 10px;
   color: #677C95;
 }
 </style>
