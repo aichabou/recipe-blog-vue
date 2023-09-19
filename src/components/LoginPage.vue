@@ -27,6 +27,8 @@
 
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -37,7 +39,24 @@ export default {
   },
   methods: {
     login() {
-      this.$router.push('/home');
+      // Utilisez Axios ici pour effectuer la requête HTTP POST vers votre API Symfony via cors-anywhere
+      axios.post(`http://localhost:8000/api/login`, {
+        email: this.email,
+        password: this.password
+      })
+      .then(response => {
+        // Gérez la réponse de l'API Symfony ici
+        const token = response.data.token;
+        // Stockez le jeton dans le local storage pour une utilisation ultérieure
+        localStorage.setItem('token', token);
+
+        // Redirigez l'utilisateur vers la page d'accueil ou une autre page appropriée après la connexion réussie
+        this.$router.push('/home');
+      })
+      .catch(error => {
+        // Gérez les erreurs, par exemple, en affichant un message d'erreur à l'utilisateur
+        console.error('Erreur lors de la connexion :', error);
+      });
     },
     togglePasswordVisibility() {
       this.showPassword = !this.showPassword;
@@ -45,6 +64,8 @@ export default {
   },
 };
 </script>
+
+
 
 <style scoped>
 
