@@ -15,6 +15,7 @@
     "core-js": "^3.8.3",
     "cors-anywhere": "^0.4.4",
     "flag-icon-css": "^4.1.7",
+    "jwt-decode": "^3.1.2",
     "vue": "^3.2.13",
     "vue-router": "^4.0.13"
   },
