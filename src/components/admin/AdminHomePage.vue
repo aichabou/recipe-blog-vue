@@ -142,6 +142,10 @@ export default {
   padding: 8px 12px 0;
 }
 
+.button {
+    border: 1px solid white;
+  }
+
 @media screen and (max-width: 768px) {
   .work__container {
     padding: 0 10px 0 145px;

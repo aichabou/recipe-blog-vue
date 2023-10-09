@@ -37,7 +37,7 @@
                 <span>{{ selectedVideo }}</span>
               </div>
             </div>
-            <button type="submit" class="button center-element">Ajouter la recette</button>
+            <button @click="soumettreRecette" type="submit" class="button">Ajouter la recette</button>
           </form>
         </div>
       </section>
@@ -46,6 +46,7 @@
   </template>
   
   <script>
+  import axios from 'axios';
   import LogOutHeader from "@/components/Header/LogOutHeader.vue";
   import Footer from "@/components/Footer/Footer.vue";
   
@@ -60,30 +61,35 @@
         description: "",
         ingredients: "",
         instructions: "",
-        imageURL: "",
-        videoURL: "",
         selectedImage: "",
-        selectedVideo: "", 
+        selectedVideo: "",
       };
     },
     methods: {
       soumettreRecette() {
-        // Vous pouvez traiter les données du formulaire ici, par exemple, les envoyer à un serveur
-        console.log("Recette soumise :");
-        console.log("Titre :", this.titre);
-        console.log("Description :", this.description);
-        console.log("Ingrédients :", this.ingredients);
-        console.log("Instructions :", this.instructions);
-        console.log("Image URL :", this.imageURL);
-        console.log("Vidéo URL :", this.videoURL);
+        const formData = new FormData();
+        formData.append('titre', this.titre);
+        formData.append('description', this.description);
+        formData.append('ingredients', this.ingredients);
+        formData.append('instructions', this.instructions);
+        formData.append('image', this.selectedImage);
+        formData.append('video', this.selectedVideo);
   
-        // Réinitialisez les champs de formulaire après la soumission si nécessaire
-        this.titre = "";
-        this.description = "";
-        this.ingredients = "";
-        this.instructions = "";
-        this.imageURL = "";
-        this.videoURL = "";
+        // Envoyer les données au serveur Symfony
+        axios.post('http://localhost:8000/recipe', formData)
+          .then(response => {
+            console.log('Recette créée avec succès. ID:', response.data.id);
+            // Réinitialisez les champs de formulaire après la soumission si nécessaire
+            this.titre = "";
+            this.description = "";
+            this.ingredients = "";
+            this.instructions = "";
+            this.selectedImage = null;
+            this.selectedVideo = null;
+          })
+          .catch(error => {
+            console.error('Erreur lors de la création de la recette :', error);
+          });
       },
       openImageDialog() {
         this.$refs.imageInput.click();
@@ -94,12 +100,10 @@
       handleImageUpload(event) {
         const file = event.target.files[0];
         this.selectedImage = file ? file.name : "";
-        // Vous pouvez télécharger le fichier image ici si nécessaire
       },
       handleVideoUpload(event) {
         const file = event.target.files[0];
         this.selectedVideo = file ? file.name : "";
-        // Vous pouvez télécharger le fichier vidéo ici si nécessaire
       },
     },
   };
@@ -143,10 +147,8 @@
     border: none;
     border-radius: 5px;
   }
-  .center-element {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .button {
+    border: 1px solid white;
   }
   </style>
   
