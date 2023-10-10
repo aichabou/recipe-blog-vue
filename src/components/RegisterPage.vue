@@ -79,16 +79,16 @@
   </script>
   
   <style>
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 40px;
-  }
-  </style>
+@media screen and (min-width: 768px) {
+  .bording-box {
+  margin-top: 70px;
+  width: 400px;
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .bording-box {
+  width: 500px;
+}
+}
+</style>

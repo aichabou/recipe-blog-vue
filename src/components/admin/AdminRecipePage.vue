@@ -110,7 +110,6 @@
   </script>
   
   <style>
-  /* Styles spécifiques au composant */
   .form-group {
     margin-bottom: 20px;
   }
@@ -147,8 +146,21 @@
     border: none;
     border-radius: 5px;
   }
-  .button {
-    border: 1px solid white;
+  @media screen and (min-width: 768px) {
+  .form-group input,
+  .form-group textarea {
+    width: 80%;
+    padding: 10px;
+    font-size: 12px;
+  }
+  }
+  @media screen and (min-width: 1024px) {
+    .form-group input,
+  .form-group textarea {
+    width: 120%;
+    padding: 50px;
+    font-size: 12px;
+  }
   }
   </style>
   

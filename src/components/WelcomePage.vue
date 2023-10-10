@@ -39,17 +39,14 @@ export default {
 
 <style>
 .home {
-  height: calc(100vh - 3rem);
+  height: 100vh;
   row-gap: 1rem;
 }
 
-.home__data {
-  align-self: center;
-}
 
 .home__title {
   font-size: var(--big-font-size);
-  margin-bottom: 100px;
+  margin-bottom: 500px;
 }
 
 .home__title-color {
@@ -60,9 +57,9 @@ export default {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 250px;
-  margin-top: 80px;
-  margin-left: 700px;
+  width: 100px;
+  margin-top: 120px;
+  margin-left: 220px;
   animation: glide 2s ease-in-out alternate infinite;
   -webkit-animation: glide 2s ease-in-out alternate infinite;
 }
@@ -72,7 +69,6 @@ export default {
     left: 0px;
     top: 0px;
   }
-
   to {
     left: 0px;
     top: 20px;
@@ -84,52 +80,26 @@ export default {
     left: 0px;
     top: 0px;
   }
-
   to {
     left: 0px;
     top: 20px;
   }
 }
 
-/* ===== MEDIA QUERIES=====*/
-@media screen and (max-width: 768px) {
-  .home__img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 240px;
-    margin-top: 50px;
-    margin-left: 360px;
-    animation: glide 2s ease-in-out alternate infinite;
-    -webkit-animation: glide 2s ease-in-out alternate infinite;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .home__img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100px;
-    margin-top: 120px;
-    margin-left: 230px;
-    animation: glide 2s ease-in-out alternate infinite;
-    -webkit-animation: glide 2s ease-in-out alternate infinite;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .home {
-    height: 100vh;
+    height: calc(100vh - 3rem);
   }
 
-  .home__data {
-    align-self: flex-end;
+  .home__title {
+    font-size: var(--top-font-size);
+    margin-bottom: 70px;
   }
 
   .home__img {
-    width: 400px;
-    bottom: 15%;
+    width: 200px;
+    margin-top: 130px;
+    margin-left: 550px;
   }
 }
 
@@ -139,8 +109,15 @@ export default {
     margin-right: auto;
   }
 
+  .home__title {
+    font-size: var(--big-font-size);
+    margin-bottom: 100px;
+  }
+
   .home__img {
-    margin-left: 750px;
+    width: 350px;
+    margin-top: 100px;
+    margin-left: 850px;
   }
 }
 </style>

@@ -26,12 +26,32 @@ export default {
 }
 
 .footer__social {
-  margin-bottom: var(--mb-4);
+  margin-bottom: var(--mb-1);
 }
 
 .footer__icon {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #fff;
   margin: 0 var(--mb-2);
+}
+.footer__copyright{
+  font-size:10px;
+}
+@media screen and (min-width: 768px) {
+  .footer__icon {
+  font-size: 1.25rem;
+}
+.footer__copyright{
+  font-size:12px;
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__icon {
+  font-size: 1.5rem;
+}
+.footer__copyright{
+  font-size:15px;
+}
 }
 </style>

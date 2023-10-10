@@ -84,11 +84,13 @@ export default {
   row-gap: 2rem;
   padding-top: 70px;
   padding-bottom: 70px;
+  display: grid;
+  place-items: center;
 }
 
 .work__img {
-  width: 300px;
-  height: 220px;
+  width: 200px;
+  height: 150px;
   padding: 0;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -102,8 +104,8 @@ export default {
 
 .work__img img {
   margin: 0;
-  width: 300px;
-  height: 224px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   display: block;
 }
@@ -114,7 +116,7 @@ export default {
   padding: 12px 12px 48px;
   line-height: 32px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 15px;
   color: #F6BD60;
 }
 
@@ -126,7 +128,7 @@ export default {
 
 .work__img p {
   text-align: center;
-  font-size: 15px;
+  font-size: 10px;
   margin: 0;
   line-height: 1.5;
 }
@@ -141,20 +143,32 @@ export default {
 .card:focus-within h3 {
   padding: 8px 12px 0;
 }
-
-.button {
-    border: 1px solid white;
-  }
-
-@media screen and (max-width: 768px) {
-  .work__container {
-    padding: 0 10px 0 145px;
-  }
+.button{
+  font-size:10px;
+  padding: 10px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 768px) {
   .work__container {
-    padding: 0 10px 0 30px;
-  }
+  padding: 20px 0 20px 20px;
+}
+
+  h2{
+    padding-top: 30px;
+}
+
+.button{
+  font-size: 13px;
+  padding: 13px;
+  margin-bottom: 15px;
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .button{
+  font-size: 13px;
+  padding: 13px;
+  margin-bottom: 17px;
+}
 }
 </style>

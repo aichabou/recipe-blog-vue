@@ -98,4 +98,17 @@ export default {
   font-size: 10px;
   color: var(--second-color);
 }
+
+@media screen and (min-width: 768px) {
+  .bording-box {
+  margin-top: 70px;
+  width: 400px;
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .bording-box {
+  width: 500px;
+}
+}
 </style>

@@ -87,21 +87,34 @@
   </script>
   
   <style>
-  .instructions-container {
-    display: flex;
-    align-items: flex-start;
+  .section-title{
+    margin-top: 5px;
   }
-  
+
+  .about__text{
+    margin-right: 20px;
+    text-align: justify;
+  }
+
   .points {
     list-style-type: disc;
+    text-align: justify;
+    margin: 0 20px 0 20px;
+  }
+  
+  .about__img img {
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 10px;
   }
   .video {
-    margin-left: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
   }
   
   .video video {
-    width: 320px;
-    height: 488px;
+    width: 270px;
+    height: 480px;
     object-fit: cover;
   }
   
@@ -114,13 +127,42 @@
     height: 100px;
     margin-bottom: 10px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 12px;
     resize: vertical;
   }
   
   .comment-section button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
+  }
+
+  @media screen and (min-width: 768px) {
+  .about__container{
+    margin: 30px;
+  }
+
+  .video video {
+    width: 300px;
+  }
+  .comment-section textarea {
+    font-size: 15px;
+  }
+  
+  .comment-section button {
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  }
+  @media screen and (min-width: 1024px) {
+
+    .about__container{
+    margin: 100px;
+  }
+  
+  .video video {
+    width: 320px;
+  }
   }
   </style>
