@@ -35,6 +35,14 @@ const routes = [
         component: () => import('./components/Recipes/RecipeCarrotCakePage.vue'),
       },
       {
+        path: '/recipe/bananabread',
+        component: () => import('./components/Recipes/RecipeBananaBreadPage.vue'),
+      },
+      {
+        path: '/recipe/cookies',
+        component: () => import('./components/Recipes/RecipeCookiesPage.vue'),
+      },
+      {
         path: '/admin/home',
         component: () => import('./components/admin/AdminHomePage.vue'),
       },

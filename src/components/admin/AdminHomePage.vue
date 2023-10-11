@@ -5,9 +5,6 @@
     <router-link to="/admin/recipe">
       <button class="button">Ajouter une nouvelle recette</button>
     </router-link>
-    <router-link to="/admin/parameter">
-      <button class="button">Parametre</button>
-    </router-link>
     <div class="work-back">
       <div class="work__container bd-grid">
         <div v-for="(project, index) in projects" :key="index" class="work__img">
@@ -35,43 +32,37 @@ export default {
   data() {
     return {
       projects: [
-        {
-          title: "Archi Design",
-          image: "img/img_sites/archiDesign.PNG",
-          link: "sites/archiDesign/index.html",
-          description: "HTML / CSS",
-        },
-        {
-          title: "Freshly Restaurant",
-          image: "img/img_sites/freshlyResto.PNG",
-          link: "sites/freshly_resto/index.html",
-          description: "HTML / CSS / JavaScript",
-        },
-        {
-          title: "Freshly Restaurant",
-          image: "img/img_sites/freshlyResto.PNG",
-          link: "sites/freshly_resto/index.html",
-          description: "HTML / CSS / JavaScript",
-        },
-        {
-          title: "Freshly Restaurant",
-          image: "img/img_sites/freshlyResto.PNG",
-          link: "sites/freshly_resto/index.html",
-          description: "HTML / CSS / JavaScript",
-        },
-        {
-          title: "Freshly Restaurant",
-          image: "img/img_sites/freshlyResto.PNG",
-          link: "sites/freshly_resto/index.html",
-          description: "HTML / CSS / JavaScript",
-        },
-        {
-          title: "Freshly Restaurant",
-          image: "img/img_sites/freshlyResto.PNG",
-          link: "sites/freshly_resto/index.html",
-          description: "HTML / CSS / JavaScript",
-        },
-      ],
+          {
+            title: "Brownies",
+            image: "/assets/brownies.jpeg",
+            link: "/recipe/brownies",
+          },
+          {
+            title: "Pancakes",
+            image: "/assets/pancake.jpeg",
+            link: "/recipe/pancakes",
+          },
+          {
+            title: "Cheesecake",
+            image: "/assets/cheesecake.jpeg",
+            link: "/recipe/cheesecake",
+          },
+          {
+            title: "Carrot Cake",
+            image: "/assets/carrotcake.jpeg",
+            link: "/recipe/carrotcake",
+          },
+          {
+            title: "Banana Bread",
+            image: "/assets/bananabread.jpeg",
+            link: "/recipe/bananabread",
+          },
+          {
+            title: "Cookies",
+            image: "/assets/cookies.jpeg",
+            link: "/recipe/cookies",
+          },
+        ],
     };
   },
 };
@@ -107,7 +98,7 @@ export default {
 
 .work__img img {
   margin: 0;
-  width: 150px;
+  width: 200px;
   height: 150px;
   object-fit: cover;
   display: block;
@@ -115,11 +106,11 @@ export default {
 
 .work__img h3 {
   text-align: center;
-  margin: 0;
+  margin-top: 10px;
   padding: 12px 12px 48px;
   line-height: 32px;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 20px;
   color: #F6BD60;
 }
 

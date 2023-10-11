@@ -49,14 +49,14 @@
             link: "/recipe/carrotcake",
           },
           {
-            title: "Freshly Restaurant",
-            image: "img/img_sites/freshlyResto.PNG",
-            link: "sites/freshly_resto/index.html",
+            title: "Banana Bread",
+            image: "assets/bananabread.jpeg",
+            link: "/recipe/bananabread",
           },
           {
-            title: "Freshly Restaurant",
-            image: "img/img_sites/freshlyResto.PNG",
-            link: "sites/freshly_resto/index.html",
+            title: "Cookies",
+            image: "assets/cookies.jpeg",
+            link: "/recipe/cookies",
           },
         ],
       };
@@ -102,11 +102,11 @@
   
   .work__img h3 {
     text-align: center;
-    margin: 0;
+    margin-top: 10px;
     padding: 12px 12px 48px;
     line-height: 32px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 20px;
     color: #F6BD60;
   }
   
