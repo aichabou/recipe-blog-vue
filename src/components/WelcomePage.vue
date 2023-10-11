@@ -1,9 +1,7 @@
 <template>
   <div>
     <Header></Header>
-    <!-- MAIN CONTENT -->
     <main class="l-main">
-      <!--===== HOME =====-->
       <section class="home bd-grid" id="home">
         <div class="home__data">
           <h1 class="home__title">
@@ -120,4 +118,5 @@ export default {
     margin-left: 850px;
   }
 }
+
 </style>

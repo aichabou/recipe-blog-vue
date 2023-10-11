@@ -19,8 +19,20 @@ const routes = [
         component: () => import('./components/HomePage.vue'),
       },
       {
-        path: '/recipe',
-        component: () => import('./components/RecipePage.vue'),
+        path: '/recipe/brownies',
+        component: () => import('./components/Recipes/RecipeBrowniesPage.vue'),
+      },
+      {
+        path: '/recipe/pancakes',
+        component: () => import('./components/Recipes/RecipePancakePage.vue'),
+      },
+      {
+        path: '/recipe/cheesecake',
+        component: () => import('./components/Recipes/RecipeCheesecakePage.vue'),
+      },
+      {
+        path: '/recipe/carrotcake',
+        component: () => import('./components/Recipes/RecipeCarrotCakePage.vue'),
       },
       {
         path: '/admin/home',
@@ -29,6 +41,10 @@ const routes = [
       {
         path: '/admin/recipe',
         component: () => import('./components/admin/AdminRecipePage.vue'),
+      },
+      {
+        path: '/admin/parameter',
+        component: () => import('./components/admin/AdminParameterPage.vue'),
       },
 ];
 

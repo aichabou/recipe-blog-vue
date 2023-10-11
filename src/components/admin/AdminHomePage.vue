@@ -5,6 +5,9 @@
     <router-link to="/admin/recipe">
       <button class="button">Ajouter une nouvelle recette</button>
     </router-link>
+    <router-link to="/admin/parameter">
+      <button class="button">Parametre</button>
+    </router-link>
     <div class="work-back">
       <div class="work__container bd-grid">
         <div v-for="(project, index) in projects" :key="index" class="work__img">
@@ -165,6 +168,10 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
+  .work__container {
+  margin: 0 auto;
+}
+
   .button{
   font-size: 13px;
   padding: 13px;

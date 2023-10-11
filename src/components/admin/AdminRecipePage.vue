@@ -67,16 +67,17 @@
     },
     methods: {
       soumettreRecette() {
-        const formData = new FormData();
-        formData.append('titre', this.titre);
-        formData.append('description', this.description);
-        formData.append('ingredients', this.ingredients);
-        formData.append('instructions', this.instructions);
-        formData.append('image', this.selectedImage);
-        formData.append('video', this.selectedVideo);
+        const data = {
+      titre: this.titre,
+      description: this.description,
+      ingredients: this.ingredients,
+      instructions: this.instructions,
+      image: this.selectedImage, // Si vous devez envoyer le nom du fichier, mettez le chemin complet ici
+      video: this.selectedVideo, // Pareil ici, si vous devez envoyer le nom du fichier vidéo
+    };
   
         // Envoyer les données au serveur Symfony
-        axios.post('http://localhost:8000/recipe', formData)
+        axios.post('http://localhost:8000/recipe', data)
           .then(response => {
             console.log('Recette créée avec succès. ID:', response.data.id);
             // Réinitialisez les champs de formulaire après la soumission si nécessaire

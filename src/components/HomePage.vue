@@ -8,7 +8,6 @@
             <a :href="project.link"><img :src="project.image" alt="recette image"></a>
             <h3>{{ project.title }}</h3>
             <div class="focus-content">
-              <p>{{ project.description }}</p>
             </div>
           </div>
         </div>
@@ -30,40 +29,34 @@
       return {
         projects: [
           {
-            title: "Archi Design",
-            image: "img/img_sites/archiDesign.PNG",
-            link: "sites/archiDesign/index.html",
-            description: "HTML / CSS",
+            title: "Brownies",
+            image: "assets/brownies.jpeg",
+            link: "/recipe/brownies",
+          },
+          {
+            title: "Pancakes",
+            image: "assets/pancake.jpeg",
+            link: "/recipe/pancakes",
+          },
+          {
+            title: "Cheesecake",
+            image: "assets/cheesecake.jpeg",
+            link: "/recipe/cheesecake",
+          },
+          {
+            title: "Carrot Cake",
+            image: "assets/carrotcake.jpeg",
+            link: "/recipe/carrotcake",
           },
           {
             title: "Freshly Restaurant",
             image: "img/img_sites/freshlyResto.PNG",
             link: "sites/freshly_resto/index.html",
-            description: "HTML / CSS / JavaScript",
           },
           {
             title: "Freshly Restaurant",
             image: "img/img_sites/freshlyResto.PNG",
             link: "sites/freshly_resto/index.html",
-            description: "HTML / CSS / JavaScript",
-          },
-          {
-            title: "Freshly Restaurant",
-            image: "img/img_sites/freshlyResto.PNG",
-            link: "sites/freshly_resto/index.html",
-            description: "HTML / CSS / JavaScript",
-          },
-          {
-            title: "Freshly Restaurant",
-            image: "img/img_sites/freshlyResto.PNG",
-            link: "sites/freshly_resto/index.html",
-            description: "HTML / CSS / JavaScript",
-          },
-          {
-            title: "Freshly Restaurant",
-            image: "img/img_sites/freshlyResto.PNG",
-            link: "sites/freshly_resto/index.html",
-            description: "HTML / CSS / JavaScript",
           },
         ],
       };
@@ -101,7 +94,7 @@
   
   .work__img img {
     margin: 0;
-    width: 150px;
+    width: 200px;
     height: 150px;
     object-fit: cover;
     display: block;
@@ -153,8 +146,8 @@
   
   @media screen and (min-width: 1024px) {
     .work__container {
-      padding: 0 10px 0 30px;
-    }
+  margin: 0 auto;
+  }
   }
   </style>
   

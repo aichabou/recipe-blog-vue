@@ -4,7 +4,7 @@
       <h2 class="section-title">Brownies</h2>
       <div class="about__container bd-grid">
         <div class="about__img">
-          <img :src="require('@/assets/image/brownies.jpeg')" alt="photo de profil">
+          <img :src="require('/public/assets/brownies.jpeg')" alt="photo de profil">
         </div>
         <div>
           <p class="about__text">
