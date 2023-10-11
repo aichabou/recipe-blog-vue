@@ -28,6 +28,7 @@
         </div>
 
         <h3>Instructions</h3>
+        <br>
         <div>
           <ul class="points">
             <li>Dans un grand bol, mélangez la farine, le sucre, la poudre à lever et le sel.</li>

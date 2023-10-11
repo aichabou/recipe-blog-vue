@@ -27,6 +27,7 @@
         </div>
 
         <h3>Instructions</h3>
+        <br>
         <div>
           <ul class="points">
             <li>Préchauffez votre four à 160°C (thermostat 5-6) et graissez un moule à cheesecake.</li>

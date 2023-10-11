@@ -29,6 +29,7 @@
         </div>
 
         <h3>Instructions</h3>
+        <br>
         <div>
           <ul class="points">
             <li>Préchauffez votre four à 180°C (thermostat 6) et tapissez une plaque à pâtisserie de papier sulfurisé.</li>
