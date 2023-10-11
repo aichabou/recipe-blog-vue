@@ -41,7 +41,6 @@ export default {
   row-gap: 1rem;
 }
 
-
 .home__title {
   font-size: var(--big-font-size);
   margin-bottom: 500px;
@@ -118,5 +117,4 @@ export default {
     margin-left: 850px;
   }
 }
-
 </style>

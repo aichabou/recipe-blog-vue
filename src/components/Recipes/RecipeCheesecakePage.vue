@@ -5,7 +5,7 @@
       <h2 class="section-title">Cheesecake</h2>
       <div class="about__container bd-grid">
         <div class="about__img">
-          <img :src="require('/public/assets/cheesecake.jpeg')" alt="photo de cheesecake">
+          <img :src="require('/public/assets/cheesecake.jpeg')" alt="cheesecake">
         </div>
         <div>
           <p class="about__text">
@@ -27,7 +27,6 @@
         </div>
 
         <h3>Instructions</h3>
-        <br>
         <div>
           <ul class="points">
             <li>Préchauffez votre four à 160°C (thermostat 5-6) et graissez un moule à cheesecake.</li>
@@ -58,110 +57,112 @@
     <Footer></Footer>
   </div>
 </template>
-  
-  <script>
-  import LogOutHeader from "@/components/Header/LogOutHeader.vue";
-  import Footer from "@/components/Footer/Footer.vue";
-  
-  export default {
-    components: {
-      LogOutHeader,
-      Footer,
-    },
-    data() {
-      return {
-        commentText: "", // Cette variable stockera le texte du commentaire
-      };
-    },
-    methods: {
-      ajouterCommentaire() {
-        // Cette méthode sera appelée lorsque l'utilisateur cliquera sur le bouton "Ajouter un commentaire"
-        // Vous pouvez traiter le texte du commentaire ici, par exemple, l'envoyer à un serveur, le stocker localement, etc.
-        console.log("Nouveau commentaire ajouté :", this.commentText);
-        // Réinitialisez le champ de texte après l'ajout du commentaire si nécessaire
-        this.commentText = "";
-      },
-    },
-  };
-  </script>
-  
-  <style>
-  .section-title{
-    margin-top: 5px;
-  }
 
-  .about__text{
-    margin-right: 20px;
-    text-align: justify;
-  }
+<script>
+import LogOutHeader from "@/components/Header/LogOutHeader.vue";
+import Footer from "@/components/Footer/Footer.vue";
 
-  .points {
-    list-style-type: disc;
-    text-align: justify;
-    margin: 0 20px 0 20px;
-  }
-  
-  .about__img img {
-    width: 200px;
-    margin: 0 auto;
-    border-radius: 10px;
-  }
-  .video {
-    margin: 0 auto;
-    margin-top: 30px;
-  }
-  
-  .video video {
-    width: 270px;
-    height: 480px;
-    object-fit: cover;
-  }
-  
-  .comment-section {
-    margin-top: 20px;
-  }
-  
-  .comment-section textarea {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 12px;
-    resize: vertical;
-  }
-  
-  .comment-section button {
-    padding: 10px 20px;
-    font-size: 12px;
-    cursor: pointer;
-  }
+export default {
+  components: {
+    LogOutHeader,
+    Footer,
+  },
+  data() {
+    return {
+      commentText: "", // Cette variable stockera le texte du commentaire
+    };
+  },
+  methods: {
+    ajouterCommentaire() {
+      // Cette méthode sera appelée lorsque l'utilisateur cliquera sur le bouton "Ajouter un commentaire"
+      // Vous pouvez traiter le texte du commentaire ici, par exemple, l'envoyer à un serveur, le stocker localement, etc.
+      console.log("Nouveau commentaire ajouté :", this.commentText);
+      // Réinitialisez le champ de texte après l'ajout du commentaire si nécessaire
+      this.commentText = "";
+    },
+  },
+};
+</script>
 
-  @media screen and (min-width: 768px) {
-  .about__container{
+<style scoped>
+.section-title {
+  margin-top: 5px;
+}
+
+.about__text {
+  margin-right: 20px;
+  text-align: justify;
+}
+
+.points {
+  list-style-type: disc;
+  text-align: justify;
+  margin: 0 20px 0 20px;
+}
+
+.about__img img {
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.video {
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.video video {
+  width: 270px;
+  height: 480px;
+  object-fit: cover;
+}
+
+.comment-section {
+  margin-top: 20px;
+}
+
+.comment-section textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 12px;
+  resize: vertical;
+}
+
+.comment-section button {
+  padding: 10px 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .about__container {
     margin: 30px;
   }
 
   .video video {
     width: 300px;
   }
+
   .comment-section textarea {
     font-size: 15px;
   }
-  
+
   .comment-section button {
     padding: 10px 20px;
     font-size: 15px;
     cursor: pointer;
   }
-  }
-  @media screen and (min-width: 1024px) {
+}
 
-    .about__container{
+@media screen and (min-width: 1024px) {
+  .about__container {
     margin: 100px;
   }
-  
+
   .video video {
     width: 320px;
   }
-  }
-  </style>
+}
+</style>

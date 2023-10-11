@@ -32,43 +32,43 @@ export default {
   data() {
     return {
       projects: [
-          {
-            title: "Brownies",
-            image: "/assets/brownies.jpeg",
-            link: "/recipe/brownies",
-          },
-          {
-            title: "Pancakes",
-            image: "/assets/pancake.jpeg",
-            link: "/recipe/pancakes",
-          },
-          {
-            title: "Cheesecake",
-            image: "/assets/cheesecake.jpeg",
-            link: "/recipe/cheesecake",
-          },
-          {
-            title: "Carrot Cake",
-            image: "/assets/carrotcake.jpeg",
-            link: "/recipe/carrotcake",
-          },
-          {
-            title: "Banana Bread",
-            image: "/assets/bananabread.jpeg",
-            link: "/recipe/bananabread",
-          },
-          {
-            title: "Cookies",
-            image: "/assets/cookies.jpeg",
-            link: "/recipe/cookies",
-          },
-        ],
+        {
+          title: "Brownies",
+          image: "/assets/brownies.jpeg",
+          link: "/recipe/brownies",
+        },
+        {
+          title: "Pancakes",
+          image: "/assets/pancake.jpeg",
+          link: "/recipe/pancakes",
+        },
+        {
+          title: "Cheesecake",
+          image: "/assets/cheesecake.jpeg",
+          link: "/recipe/cheesecake",
+        },
+        {
+          title: "Carrot Cake",
+          image: "/assets/carrotcake.jpeg",
+          link: "/recipe/carrotcake",
+        },
+        {
+          title: "Banana Bread",
+          image: "/assets/bananabread.jpeg",
+          link: "/recipe/bananabread",
+        },
+        {
+          title: "Cookies",
+          image: "/assets/cookies.jpeg",
+          link: "/recipe/cookies",
+        },
+      ],
     };
   },
 };
 </script>
 
-<style>
+<style scoped>
 .work-section {
   padding: var(--mb-4) 0;
   text-align: center;
@@ -137,36 +137,37 @@ export default {
 .card:focus-within h3 {
   padding: 8px 12px 0;
 }
-.button{
-  font-size:10px;
+
+.button {
+  font-size: 10px;
   padding: 10px;
 }
 
 @media screen and (min-width: 768px) {
   .work__container {
-  padding: 20px 0 20px 20px;
-}
+    padding: 20px 0 20px 20px;
+  }
 
-  h2{
+  h2 {
     padding-top: 30px;
-}
+  }
 
-.button{
-  font-size: 13px;
-  padding: 13px;
-  margin-bottom: 15px;
-}
+  .button {
+    font-size: 13px;
+    padding: 13px;
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .work__container {
-  margin: 0 auto;
-}
+    margin: 0 auto;
+  }
 
-  .button{
-  font-size: 13px;
-  padding: 13px;
-  margin-bottom: 17px;
-}
+  .button {
+    font-size: 13px;
+    padding: 13px;
+    margin-bottom: 17px;
+  }
 }
 </style>

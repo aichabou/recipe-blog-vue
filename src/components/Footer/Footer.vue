@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .footer {
   background-color: var(--first-color);
   color: #fff;
@@ -34,24 +34,28 @@ export default {
   color: #fff;
   margin: 0 var(--mb-2);
 }
+
 .footer__copyright{
-  font-size:10px;
+  font-size: 10px;
 }
+
 @media screen and (min-width: 768px) {
   .footer__icon {
-  font-size: 1.25rem;
-}
-.footer__copyright{
-  font-size:12px;
-}
+    font-size: 1.25rem;
+  }
+  
+  .footer__copyright{
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .footer__icon {
-  font-size: 1.5rem;
-}
-.footer__copyright{
-  font-size:15px;
-}
+    font-size: 1.5rem;
+  }
+  
+  .footer__copyright{
+    font-size: 15px;
+  }
 }
 </style>

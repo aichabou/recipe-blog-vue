@@ -62,17 +62,17 @@ export default {
         password: this.password
       })
       .then(response => {
-      const token = response.data.token;
-      localStorage.setItem('token', token);
-      // Récupérer le rôle de l'utilisateur depuis la réponse
-      const roles = response.data.roles;
-      // Rediriger en fonction du rôle de l'utilisateur
-      if (roles.includes('ROLE_ADMIN')) {
-      this.$router.push('/admin/home');
-      } else {
+        const token = response.data.token;
+        localStorage.setItem('token', token);
+        // Récupérer le rôle de l'utilisateur depuis la réponse
+        const roles = response.data.roles;
+        // Rediriger en fonction du rôle de l'utilisateur
+        if (roles.includes('ROLE_ADMIN')) {
+          this.$router.push('/admin/home');
+        } else {
           this.$router.push('/home');
-      }
-    })
+        }
+      })
       .catch(error => {
         console.error('Erreur lors de la connexion :', error);
       });
@@ -108,14 +108,14 @@ export default {
 
 @media screen and (min-width: 768px) {
   .bording-box {
-  margin-top: 70px;
-  width: 400px;
-}
+    margin-top: 70px;
+    width: 400px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .bording-box {
-  width: 500px;
-}
+    width: 500px;
+  }
 }
 </style>
