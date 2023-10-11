@@ -54,9 +54,9 @@ export default {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 100px;
-  margin-top: 120px;
-  margin-left: 220px;
+  width: 80px;
+  margin-top: 60px;
+  margin-left: 180px;
   animation: glide 2s ease-in-out alternate infinite;
   -webkit-animation: glide 2s ease-in-out alternate infinite;
 }
@@ -89,14 +89,14 @@ export default {
   }
 
   .home__title {
-    font-size: var(--top-font-size);
-    margin-bottom: 70px;
+    font-size: var(--h2-font-size);
+    margin-bottom: 350px;
   }
 
   .home__img {
     width: 200px;
-    margin-top: 130px;
-    margin-left: 550px;
+    margin-top: 100px;
+    margin-left: 400px;
   }
 }
 
