@@ -111,6 +111,9 @@ export default {
 </script>
 
 <style scoped>
+.section-title{
+  font-size: 2rem;
+}
 .form-group {
   margin-bottom: 20px;
 }
@@ -118,12 +121,13 @@ export default {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
+  font-size: 0.8rem;
 }
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 10px;
-  font-size: 16px;
+  font-size: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }

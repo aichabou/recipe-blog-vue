@@ -5,17 +5,12 @@
       <section class="home bd-grid" id="home">
         <div class="home__data">
           <h1 class="home__title">
-            Bienvenue<br />
-            à <span class="home__title-color">Aicha's sweetthoth</span
-            ><br />
-            Mon Blog personnel <br />de pâtisserie
+            Bienvenue à <span class="home__title-color">Aicha's sweetthoth</span>
+            Mon Blog personnel de pâtisserie
           </h1>
         </div>
         <div class="home__img">
-          <img
-            :src="require('@/assets/image/profil_blog.png')"
-            alt="photo de profil"
-          />
+          <img :src="require('@/assets/image/profil_blog.png')" alt="photo de profil" />
         </div>
       </section>
     </main>
@@ -36,14 +31,10 @@ export default {
 </script>
 
 <style>
-.home {
-  height: 100vh;
-  row-gap: 1rem;
-}
-
 .home__title {
-  font-size: var(--big-font-size);
-  margin-bottom: 500px;
+  font-size: var(--h2-font-size);
+  margin-top: 50px;
+  text-align: center;
 }
 
 .home__title-color {
@@ -51,15 +42,17 @@ export default {
 }
 
 .home__img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 80px;
-  margin-top: 60px;
-  margin-left: 180px;
+  width: 35%;
+  margin: 1rem auto;
+  display: block;
+  margin-top: 90px;
   animation: glide 2s ease-in-out alternate infinite;
   -webkit-animation: glide 2s ease-in-out alternate infinite;
 }
+
+.bd-grid{
+    margin: 0 auto;
+  }
 
 @keyframes glide {
   from {
@@ -84,37 +77,38 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-  .home {
-    height: calc(100vh - 3rem);
-  }
 
   .home__title {
-    font-size: var(--h2-font-size);
-    margin-bottom: 350px;
-  }
-
-  .home__img {
-    width: 200px;
-    margin-top: 100px;
-    margin-left: 400px;
+    margin-bottom: 2rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .bd-grid {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .home__title {
-    font-size: var(--big-font-size);
-    margin-bottom: 100px;
-  }
-
   .home__img {
-    width: 350px;
-    margin-top: 100px;
-    margin-left: 850px;
+  width: 30%;
+  }
+  .bd-grid{
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .home__title {
+    font-size:3.7rem;
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+
+  .bd-grid{
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .home__title {
+    font-size:5rem;
+    margin-bottom: 3rem;
+    text-align: center;
   }
 }
 </style>

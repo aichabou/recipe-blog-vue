@@ -16,7 +16,7 @@
             :type="showPassword ? 'text' : 'password'"
             v-model="password"
             placeholder="Mot de passe"
-            :class="{ 'show-password': showPassword }"
+            :class="{ 'show-password': showPassword, 'rounded-input': true }"
           />
           <span class="toggle-password" @click="togglePasswordVisibility">
             <i v-if="showPassword" class="fas fa-eye"></i>
