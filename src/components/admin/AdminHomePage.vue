@@ -2,7 +2,7 @@
   <LogOutHeader></LogOutHeader>
   <section class="work-section" id="portfolio">
     <h2 class="section-title">Bienvenue</h2>
-    <router-link to="/admin/recipe">
+    <router-link to="/admin/recipe/add">
       <button class="button">Ajouter une nouvelle recette</button>
     </router-link>
     <div class="work-back">

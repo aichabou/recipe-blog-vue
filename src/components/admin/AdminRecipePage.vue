@@ -72,8 +72,8 @@ export default {
         description: this.description,
         ingredients: this.ingredients,
         instructions: this.instructions,
-        image: this.selectedImage, // Si vous devez envoyer le nom du fichier, mettez le chemin complet ici
-        video: this.selectedVideo, // Pareil ici, si vous devez envoyer le nom du fichier vidéo
+        image: this.image,
+        video: this.video,
       };
 
       // Envoyer les données au serveur Symfony
@@ -85,8 +85,8 @@ export default {
           this.description = "";
           this.ingredients = "";
           this.instructions = "";
-          this.selectedImage = null;
-          this.selectedVideo = null;
+          this.image = null;
+          this.video = null;
         })
         .catch(error => {
           console.error('Erreur lors de la création de la recette :', error);
@@ -110,9 +110,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .section-title{
-  font-size: 2rem;
+  font-size: var(--h2-font-size);
 }
 .form-group {
   margin-bottom: 20px;
@@ -121,15 +121,17 @@ export default {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
-  font-size: 0.8rem;
+  font-size: 10px;
+  margin-left: 13px;
 }
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   font-size: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-left: 13px;
 }
 .form-group input[type="file"] {
   display: none;
@@ -154,17 +156,28 @@ export default {
 @media screen and (min-width: 768px) {
 .form-group input,
 .form-group textarea {
-  width: 80%;
+  width: 100%;
   padding: 10px;
-  font-size: 12px;
+  font-size: 15px;
+}
+.form-group label {
+  font-size: 13px;
+  margin-left: 13px;
 }
 }
 @media screen and (min-width: 1024px) {
+  .section-title {
+    font-size: var(--top-font-size);
+  }
   .form-group input,
 .form-group textarea {
   width: 120%;
   padding: 50px;
-  font-size: 12px;
+  font-size: 10px;
+}
+.form-group label {
+  font-size: 15px;
+  margin-left: 13px;
 }
 }
 </style>
