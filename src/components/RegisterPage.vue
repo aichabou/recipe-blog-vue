@@ -14,18 +14,18 @@
           />
         </div>
         <div class="form-group">
-  <input
-    type="email"
-    id="email"
-    v-model="email"
-    placeholder="Adresse mail"
-    class="rounded-input"
-    @input="validateEmail"
-  />
-  <div class="error-message-container">
-    <span v-if="emailError" class="error-message">{{ emailError }}</span>
-  </div>
-</div>
+          <input
+            type="email"
+            id="email"
+            v-model="email"
+            placeholder="Adresse mail"
+            class="rounded-input"
+            @input="validateEmail"
+          />
+          <div class="error-message-container">
+            <span v-if="emailError" class="error-message">{{ emailError }}</span>
+          </div>
+        </div>
 
         <div class="form-group password-input-container">
           <input
@@ -101,7 +101,6 @@ export default {
       return !this.emailError;
     },
     validatePassword() {
-      // Example: Password must be at least 8 characters long and contain at least one number
       const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+{};:'",.<>?/\\[\]^_`|~]).{8,}$/;
       this.passwordError = passwordRegex.test(this.password) ? '' :  'Le mot de passe doit contenir au moins une lettre majuscule, un chiffre et un caractère spécial';
       return !this.passwordError;
@@ -110,7 +109,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .error-message {
   color: red;
   font-size: 8px;

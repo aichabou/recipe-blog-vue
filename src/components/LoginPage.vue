@@ -74,16 +74,16 @@ export default {
 </script>
 
 <style>
-
 .section-title{
   font-size: var(--h2-font-size);
 }
+
 .common-style {
   font-size: 10px;
   color: var(--second-color);
 }
 
-.rounded-input ,.bording-button{
+.rounded-input, .bording-button {
   font-size: 10px;
 }
 
@@ -92,7 +92,7 @@ export default {
     margin-top: 70px;
     width: 400px;
   }
-  .rounded-input ,.bording-button{
+  .rounded-input, .bording-button {
     font-size: 12px;
   }
 }
@@ -101,10 +101,10 @@ export default {
   .bording-box {
     width: 500px;
   }
-  .section-title{
+  .section-title {
     font-size: var(--top-font-size);
   }
-  .rounded-input ,.bording-button{
+  .rounded-input, .bording-button {
     font-size: 15px;
   }
 }
@@ -113,10 +113,10 @@ export default {
   .bording-box {
     width: 600px;
   }
-  .section-title{
+  .section-title {
     font-size: var(--top-font-size);
   }
-  .rounded-input ,.bording-button{
+  .rounded-input, .bording-button {
     font-size: 20px;
   }
 }

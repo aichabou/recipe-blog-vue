@@ -46,12 +46,20 @@ const routes = [
     component: () => import('./components/admin/AdminHomePage.vue'),
   },
   {
-    path: '/admin/recipe',
+    path: '/admin/recipe/add',
     component: () => import('./components/admin/AdminRecipePage.vue'),
   },
   {
     path: '/admin/parameter',
     component: () => import('./components/admin/AdminParameterPage.vue'),
+  },
+  {
+    path: '/admin/recipe',
+    component: () => import('./components/admin/RecipePage.vue'),
+  },
+  {
+    path: '/recipe/detail',
+    component: () => import('./components/Recipes/RecipeDetails.vue'),
   },
 ];
 

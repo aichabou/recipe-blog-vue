@@ -50,9 +50,9 @@ export default {
   -webkit-animation: glide 2s ease-in-out alternate infinite;
 }
 
-.bd-grid{
-    margin: 0 auto;
-  }
+.bd-grid {
+  margin: 0 auto;
+}
 
 @keyframes glide {
   from {
@@ -77,7 +77,6 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-
   .home__title {
     margin-bottom: 2rem;
   }
@@ -85,28 +84,28 @@ export default {
 
 @media screen and (min-width: 1024px) {
   .home__img {
-  width: 30%;
+    width: 30%;
   }
-  .bd-grid{
+  .bd-grid {
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .home__title {
-    font-size:3.7rem;
+    font-size: 3.7rem;
     margin-bottom: 6rem;
     text-align: center;
   }
 
-  .bd-grid{
+  .bd-grid {
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 2560px) {
   .home__title {
-    font-size:5rem;
+    font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
   }
