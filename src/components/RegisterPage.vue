@@ -5,19 +5,38 @@
       <div class="bording-box">
         <h1 class="section-title">Inscription</h1>
         <div class="form-group">
-          <input type="text" id="username" v-model="username" placeholder="Nom d'utilisateur" class="rounded-input" />
+          <input
+            type="text"
+            id="username"
+            v-model="username"
+            placeholder="Nom d'utilisateur"
+            class="rounded-input"
+          />
         </div>
         <div class="form-group">
-          <input type="email" id="email" v-model="email" placeholder="Adresse mail" class="rounded-input" />
+          <input
+            type="email"
+            id="email"
+            v-model="email"
+            placeholder="Adresse mail"
+            class="rounded-input"
+            @input="validateEmail"
+          />
+          <div class="error-message-container">
+            <span v-if="emailError" class="error-message">{{ emailError }}</span>
+          </div>
         </div>
+
         <div class="form-group password-input-container">
           <input
             id="password"
             :type="showPassword ? 'text' : 'password'"
             v-model="password"
             placeholder="Mot de passe"
-            :class="{ 'show-password': showPassword }"
+            :class="{ 'show-password': showPassword, 'rounded-input': true }"
+            @input="validatePassword"
           />
+          <span v-if="passwordError" class="error-message">{{ passwordError }}</span>
           <span class="toggle-password" @click="togglePasswordVisibility">
             <i v-if="showPassword" class="fas fa-eye"></i>
             <i v-else class="fas fa-eye-slash"></i>
@@ -46,6 +65,8 @@ export default {
       email: '',
       password: '',
       showPassword: false,
+      emailError: '',
+      passwordError: '',
     };
   },
   methods: {
@@ -74,11 +95,27 @@ export default {
     togglePasswordVisibility() {
       this.showPassword = !this.showPassword;
     },
+    validateEmail() {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      this.emailError = emailRegex.test(this.email) ? '' : 'Veuillez saisir une adresse e-mail valide.';
+      return !this.emailError;
+    },
+    validatePassword() {
+      const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+{};:'",.<>?/\\[\]^_`|~]).{8,}$/;
+      this.passwordError = passwordRegex.test(this.password) ? '' :  'Le mot de passe doit contenir au moins une lettre majuscule, un chiffre et un caractère spécial';
+      return !this.passwordError;
+    },
   },
 };
 </script>
 
-<style scoped>
+<style>
+.error-message {
+  color: red;
+  font-size: 8px;
+  display: block;
+}
+
 @media screen and (min-width: 768px) {
   .bording-box {
     margin-top: 70px;

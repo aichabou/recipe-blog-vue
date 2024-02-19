@@ -6,7 +6,7 @@
             <img :src="require('@/assets/image/logo.png')" alt="Logo du blog" class="logo">
             <li class="nav__item"><a href="/welcome" class="nav__link">Accueil</a></li>
             <li class="nav__item"><a href="/login" class="nav__link">Connexion</a></li>
-            <li class="nav__item"><a href="/register" class="nav__link">Créer un compte</a></li>
+            <li class="nav__item"><a href="/register" class="nav__link">Inscription</a></li>
           </ul>
         </div>
         <div class="nav__toggle" id="nav-toggle">

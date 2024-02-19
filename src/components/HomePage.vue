@@ -64,7 +64,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.section-title{
+  font-size: 2.5rem;
+}
+
 .work-section {
   padding: var(--mb-4) 0;
   text-align: center;
@@ -145,8 +149,20 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
+  .section-title{
+  font-size: 4rem;
+}
   .work__container {
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section-title{
+  font-size: 5rem;
+}
+  .work__container {
+    height: calc(85vh - 1rem);
   }
 }
 </style>

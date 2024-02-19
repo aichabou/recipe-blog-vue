@@ -2,7 +2,7 @@
   <LogOutHeader></LogOutHeader>
   <section class="work-section" id="portfolio">
     <h2 class="section-title">Bienvenue</h2>
-    <router-link to="/admin/recipe">
+    <router-link to="/admin/recipe/add">
       <button class="button">Ajouter une nouvelle recette</button>
     </router-link>
     <div class="work-back">
@@ -69,6 +69,9 @@ export default {
 </script>
 
 <style scoped>
+.section-title{
+  font-size: 2.5rem;
+}
 .work-section {
   padding: var(--mb-4) 0;
   text-align: center;
@@ -160,14 +163,29 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
+
+  .section-title{
+  font-size: 4rem;
+}
   .work__container {
     margin: 0 auto;
   }
 
   .button {
-    font-size: 13px;
-    padding: 13px;
-    margin-bottom: 17px;
+    font-size: 15px;
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section-title{
+  font-size: 5rem;
+}
+  .work__container {
+    height: calc(85vh - 1rem);
+  }
+  .button {
+    font-size: 20px;
+    padding: 20px;
   }
 }
 </style>

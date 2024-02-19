@@ -114,7 +114,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.section-title{
+  font-size: var(--h2-font-size);
+}
 .form-group {
   margin-bottom: 20px;
 }
@@ -122,14 +125,17 @@ export default {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
+  font-size: 10px;
+  margin-left: 13px;
 }
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
+  padding: 8px;
+  font-size: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-left: 13px;
 }
 .form-group input[type="file"] {
   display: none;
@@ -154,17 +160,28 @@ export default {
 @media screen and (min-width: 768px) {
 .form-group input,
 .form-group textarea {
-  width: 80%;
+  width: 100%;
   padding: 10px;
-  font-size: 12px;
+  font-size: 15px;
+}
+.form-group label {
+  font-size: 13px;
+  margin-left: 13px;
 }
 }
 @media screen and (min-width: 1024px) {
+  .section-title {
+    font-size: var(--top-font-size);
+  }
   .form-group input,
 .form-group textarea {
   width: 120%;
   padding: 50px;
-  font-size: 12px;
+  font-size: 10px;
+}
+.form-group label {
+  font-size: 15px;
+  margin-left: 13px;
 }
 }
 </style>

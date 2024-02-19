@@ -13,22 +13,12 @@
             :type="showPassword ? 'text' : 'password'"
             v-model="password"
             placeholder="Mot de passe"
-            :class="{ 'show-password': showPassword }"
+            :class="{ 'show-password': showPassword, 'rounded-input': true }"
           />
           <span class="toggle-password" @click="togglePasswordVisibility">
             <i v-if="showPassword" class="fas fa-eye"></i>
             <i v-else class="fas fa-eye-slash"></i>
           </span>
-        </div>
-        <div class="form-group remember-me">
-          <div class="remember-me-checkbox">
-            <input type="checkbox" id="rememberMe" v-model="rememberMe" />
-            <label for="rememberMe"></label>
-          </div>
-          <div class="remember-me-text">
-            <label class="common-style" for="rememberMe">Se souvenir de moi</label>
-            <label class="common-style">Mot de passe oublié?</label>
-          </div>
         </div>
         <button @click="login" class="bording-button">Connexion</button>
       </div>
@@ -52,7 +42,6 @@ export default {
       email: '',
       password: '',
       showPassword: false,
-      rememberMe: false,
     };
   },
   methods: {
@@ -85,20 +74,8 @@ export default {
 </script>
 
 <style>
-.remember-me-checkbox {
-  margin-right: 10px;
-}
-
-.remember-me {
-  display: flex;
-  align-items: center;
-}
-
-.remember-me-text {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
+.section-title{
+  font-size: var(--h2-font-size);
 }
 
 .common-style {
@@ -106,16 +83,41 @@ export default {
   color: var(--second-color);
 }
 
+.rounded-input, .bording-button {
+  font-size: 10px;
+}
+
 @media screen and (min-width: 768px) {
   .bording-box {
     margin-top: 70px;
     width: 400px;
+  }
+  .rounded-input, .bording-button {
+    font-size: 12px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .bording-box {
     width: 500px;
+  }
+  .section-title {
+    font-size: var(--top-font-size);
+  }
+  .rounded-input, .bording-button {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .bording-box {
+    width: 600px;
+  }
+  .section-title {
+    font-size: var(--top-font-size);
+  }
+  .rounded-input, .bording-button {
+    font-size: 20px;
   }
 }
 </style>

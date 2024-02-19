@@ -7,7 +7,7 @@
             <li class="nav__item"><a href="/welcome" class="nav__link ">Accueil</a></li>
             <li class="nav__item"><a href="/home" class="nav__link">Recettes</a></li>
             <li class="nav__item">
-              <router-link to="/welcome" class="nav__link" id="logout-link" @click="deconnecter">Se déconnecter</router-link>
+              <router-link to="/welcome" class="nav__link" id="logout-link" @click="deconnecter">Quitter</router-link>
             </li>
           </ul>
         </div>
