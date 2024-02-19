@@ -67,30 +67,34 @@ export default {
   },
   methods: {
     soumettreRecette() {
-      const data = {
-        titre: this.titre,
-        description: this.description,
-        ingredients: this.ingredients,
-        instructions: this.instructions,
-        image: this.selectedImage, // Si vous devez envoyer le nom du fichier, mettez le chemin complet ici
-        video: this.selectedVideo, // Pareil ici, si vous devez envoyer le nom du fichier vidéo
-      };
+      const formData = new FormData();
 
-      // Envoyer les données au serveur Symfony
-      axios.post('http://localhost:8000/recipe', data)
-        .then(response => {
-          console.log('Recette créée avec succès. ID:', response.data.id);
-          // Réinitialisez les champs de formulaire après la soumission si nécessaire
-          this.titre = "";
-          this.description = "";
-          this.ingredients = "";
-          this.instructions = "";
-          this.selectedImage = null;
-          this.selectedVideo = null;
-        })
-        .catch(error => {
-          console.error('Erreur lors de la création de la recette :', error);
-        });
+      formData.append('titre', this.titre);
+      formData.append('description', this.description);
+      formData.append('ingredients', this.ingredients);
+      formData.append('instructions', this.instructions);
+
+      if (this.$refs.imageInput.files.length > 0) {
+        formData.append('image', this.$refs.imageInput.files[0]);
+      }
+      if (this.$refs.videoInput.files.length > 0) {
+        formData.append('video', this.$refs.videoInput.files[0]);
+      }
+
+      axios.post('http://localhost:8000/recipe', formData, {
+      })
+      .then(response => {
+        console.log('Recette créée avec succès. ID:', response.data.id);
+        this.titre = "";
+        this.description = "";
+        this.ingredients = "";
+        this.instructions = "";
+        this.selectedImage = null;
+        this.selectedVideo = null;
+      })
+      .catch(error => {
+        console.error('Erreur lors de la création de la recette :', error);
+      });
     },
     openImageDialog() {
       this.$refs.imageInput.click();
